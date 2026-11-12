@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-title: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #fcfaff;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(147, 51, 234, 0.12) 0px, transparent 40%),
+    radial-gradient(at 100% 0%, rgba(249, 115, 22, 0.12) 0px, transparent 40%),
+    radial-gradient(at 50% 50%, rgba(147, 51, 234, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(249, 115, 22, 0.08) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.1) 0px, transparent 40%);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Custom glassmorphism support and smooth transitions */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    0 8px 32px 0 rgba(147, 51, 234, 0.05),
+    0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.dark-glass-panel {
+  background: rgba(28, 18, 41, 0.82);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 36px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* Glass-button hover state */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 10px rgba(147, 51, 234, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(147, 51, 234, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08);
+}
+
+/* Realistic tactile icon class */
+.realistic-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 240, 250, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.9),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.03),
+    0 4px 8px rgba(147, 51, 234, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Hide scrollbar defaults */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

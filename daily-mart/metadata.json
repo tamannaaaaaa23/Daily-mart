@@ -1,0 +1,6 @@
+{
+  "name": "Daily Mart",
+  "description": "A premium e-commerce marketplace and digital retail ecosystem for Bangladesh, delivering luxury curated experiences across groceries, lifestyle fashion, electronics, and local vehicle rental/sell services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
